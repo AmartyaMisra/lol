@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>Registered people</h1>
+  <table border ="2">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>City</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for couple in couples %}
+        <tr>
+          <td>{{ couple[0] }}</td><br>
+          <td>{{ couple[1] }}</td>
+          <td>{{ couple[2] }}</td>
+          <td>{{ couple[3] }}</td>
+          <td>{{ couple[4] }}</td>
+          <td>{{ couple[5] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

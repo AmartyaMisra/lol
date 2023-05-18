@@ -1,0 +1,15 @@
+<!-- search.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search bride and grrom</title>
+</head>
+<body>
+    <h1>Search bride and grooms</h1>
+    <form action="{{ url_for('search') }}" method="POST">
+        <label for="donor_id">bride and groom id:</label>
+        <input type="text" id="couple_id" name="couple_id" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+   <body>
+    <form method="POST" action="{{ url_for('update_donor') }}">
+        <input type="hidden" name="id" value="{{ donor[7] }}">
+        <input type="text" name="city" value="{{ donor[0] }}">
+        <input type="text" name="name" value="{{ donor[1] }}">
+        <input type="text" name="gender" value="{{ donor[2] }}">
+       
+        <input type="text" name="email" value="{{ donor[5] }}">
+        <input type="text" name="phone" value="{{ donor[6] }}">
+        <input type="submit" value="Update">
+      </form>
+   </body>
+</html>

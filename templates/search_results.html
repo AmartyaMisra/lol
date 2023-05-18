@@ -1,0 +1,50 @@
+<!-- search_results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% if couples %}
+    <table>
+        <tr>
+            <th>Couple ID</th>
+            <th>city</th>
+            <th>Donor Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        {% for couple in couples %}
+        <tr>
+            <td>{{ couple[0] }}</td>
+            <td>{{ couple[1] }}</td>
+            <td>{{ couple[2] }}</td>
+            <td>{{ couple[3] }}</td>
+            <td>{{ couple[4] }}</td>
+            <td>{{ couple[5] }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No couple details found.</p>
+    {% endif %}
+</body>
+</html>
